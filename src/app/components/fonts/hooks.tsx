@@ -6,18 +6,32 @@ import { getAllFontFamiliesToLoad } from "components/fonts/lib";
 /**
  * Register all fonts to React PDF so it can render fonts correctly in PDF
  */
+
 export const useRegisterReactPDFFont = () => {
   useEffect(() => {
-    const allFontFamilies = getAllFontFamiliesToLoad();
-    allFontFamilies.forEach((fontFamily) => {
+    const fontFamilies = [
+      "NotoSansSC",
+      "Roboto",
+      "Lato",
+      "Montserrat",
+      "OpenSans",
+      "Raleway",
+      "Caladea",
+      "Lora",
+      "RobotoSlab",
+      "PlayfairDisplay",
+      "Merriweather",
+    ];
+
+    fontFamilies.forEach((fontFamily) => {
       Font.register({
         family: fontFamily,
         fonts: [
           {
-            src: `fonts/${fontFamily}-Regular.ttf`,
+            src: `/fonts/${fontFamily}-Regular.ttf`,
           },
           {
-            src: `fonts/${fontFamily}-Bold.ttf`,
+            src: `/fonts/${fontFamily}-Bold.ttf`,
             fontWeight: "bold",
           },
         ],
