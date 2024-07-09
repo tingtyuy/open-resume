@@ -6,7 +6,7 @@ import { ResumePDFEducation } from "components/Resume/ResumePDF/ResumePDFEducati
 import { ResumePDFProject } from "components/Resume/ResumePDF/ResumePDFProject";
 import { ResumePDFSkills } from "components/Resume/ResumePDF/ResumePDFSkills";
 import { ResumePDFCustom } from "components/Resume/ResumePDF/ResumePDFCustom";
-import { DEFAULT_FONT_COLOR } from "lib/redux/settingsSlice";
+import { DEFAULT_FONT_COLOR, DEFAULT_FONT_FAMILY} from "lib/redux/settingsSlice";
 import type { Settings, ShowForm } from "lib/redux/settingsSlice";
 import type { Resume } from "lib/redux/types";
 import { SuppressResumePDFErrorMessage } from "components/Resume/ResumePDF/common/SuppressResumePDFErrorMessage";
@@ -100,7 +100,7 @@ export const ResumePDF = ({
           style={{
             ...styles.flexCol,
             color: DEFAULT_FONT_COLOR,
-            fontFamily,
+            fontFamily: DEFAULT_FONT_FAMILY,
             fontSize: fontSize + "pt",
           }}
         >
